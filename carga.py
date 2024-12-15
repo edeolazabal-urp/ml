@@ -15,17 +15,17 @@ print(df.head())
 # Preprocesamiento de datos
 
 # Convertir la columna 'date' a un formato datetime si es necesario
-df['date'] = pd.to_datetime(df['date'])
+df['Date'] = pd.to_datetime(df['Date'])
 
 # Eliminar la columna 'date' si no se va a utilizar directamente en el modelo
-df = df.drop(columns=['date'])
+df = df.drop(columns=['Date'])
 
 # Verificar si hay valores nulos y eliminarlos o imputarlos
 df = df.dropna()
 
 # Separar las características (X) y la variable objetivo (y)
-X = df[['newspaper', 'tv', 'radio']]
-y = df['sales']
+X = df[['Newspaper', 'TV', 'Radio']]
+y = df['Sales']
 
 # Entrenar un modelo de regresión lineal
 
